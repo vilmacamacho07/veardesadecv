@@ -1,0 +1,16 @@
+<div>{{$flete->id}}</div>
+<div>{{$flete->gondola_id}}</div>
+<div>{{$flete->origen}}</div>
+<div>{{$flete->destino}}</div>
+<div>{{$flete->fecha_salida}}</div>
+<div>{{$flete->hora_salida}}</div>
+<div>{{$flete->mina}}</div>
+<div>{{$flete->km}}</div>
+<div>{{$flete->fecha_pago}}</div>
+<div>{{$flete->creado_por}}</div>
+<div>{{$flete->status}}</div>
+<div>{{$flete->fecha_llegada}}</div>
+<div>{{$flete->hora_llegada}}</div>
+<div>{{$flete->cliente}}</div>
+<div>{{$flete->material}}</div>
+<div>{{$flete->notas}}</div>

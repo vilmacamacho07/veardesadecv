@@ -1,0 +1,303 @@
+
+
+
+label.requerido:after{
+    content: " *";
+    color: #e73d4a
+}
+.btn-accion-tabla {
+    cursor: pointer;
+    border: none;
+    background: 0;
+    padding: 0 0 0 5px;
+    font-size: 14px !important;
+    line-height: 1.5;
+}
+.d-inline{
+    display: inline;
+}
+.width20{
+    width: 20px !important;
+}
+.width70{
+    width: 70px !important;
+}
+.width80{
+    width: 80px !important;
+}
+.width100{
+    width: 100px !important;
+}
+.pl-40{
+    padding-left:40px !important;
+}
+.pl-50{
+    padding-left:50px !important;
+}
+.pl-60{
+    padding-left:60px !important;
+}
+.form-horizontal.form--label-right .form-group label:not(.kt-checkbox):not(.kt-radio):not(.kt-option) {
+    text-align: right;
+}
+/*--------------------
+Body
+--------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;  
+  background: radial-gradient(ellipse farthest-corner at center top, #ECECEC, #999);
+  color: #363c44;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*--------------------
+Boarding Pass
+--------------------*/
+.boarding-pass {
+    position: relative;
+    top: 50%;
+    left: 20%;
+  width: 60%;
+  height: 80%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+  overflow: hidden;
+  text-transform: uppercase;
+  
+
+  small {
+    display: block;
+    font-size: 12px;
+    color: #A2A9B3;
+    margin-bottom: 2px;
+  }
+
+  strong {
+    font-size: 12px;
+    display: block;
+  }
+
+  /*--------------------
+  Header
+  --------------------*/
+  & header {
+    background: linear-gradient(to bottom, #36475f, #2c394f);
+    padding: 12px 20px;
+    height: 53px;
+
+    .logo {
+      float: left;
+      width: 104px;
+      height: 31px;
+    }
+
+    .flight {
+      float: center;
+      color: #fff;
+      text-align: center;
+
+      small {
+        font-size: 12px;
+        margin-bottom: 2px;
+        opacity: 0.8;
+      }
+
+      strong {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  /*--------------------
+  Cities
+  --------------------*/
+  .cities {
+    position: relative;
+    
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .cityic {
+        
+        float: center;
+        
+        text-align: center;
+        align-items: center;
+        position: absolute;
+      width: 100%;
+      height: 100%;
+      
+    }   
+
+    .city {
+      padding: 20px 18px;
+      float: left;
+      
+      &:nth-child(2) {
+        float: right;
+      }
+      
+      
+
+      strong {
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 1;
+      }
+
+      small {
+        margin-bottom: 0px;
+        margin-left: 3px;
+      }
+
+      
+
+     
+    }
+
+    .airplane {
+      position: absolute;
+      width: 30px;
+      height: 25px;
+      top: 57%;
+      left: 30%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      animation: move 3s infinite;
+    }
+
+    @keyframes move {
+      40% {
+        left: 50%;
+        opacity: 1;
+      }
+      100% {
+        left: 70%;
+        opacity: 0;
+      }
+    }
+  }
+
+  
+  /*--------------------
+  Infos
+  --------------------*/
+  .infos {
+    display: flex;
+    border-top: 1px solid #99D298;
+
+    .places,
+    .times {
+      width: 50%;
+      padding: 10px 0;
+
+      &::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+    
+    .times {
+      
+      strong {
+        font-size: 11px;
+      }
+    }
+
+    .places {
+      background: #ECECEC;
+      border-right: 1px solid #99D298;
+      
+      small {
+        color: #97A1AD;
+      }
+
+      strong {
+        color: #239422;
+      }
+    }
+
+    .box {
+      padding: 10px 20px 10px;
+      width: 47%;
+      float: left;
+
+      small {
+        font-size: 11px;
+      }
+      strong {
+        font-size: 11px;
+      }
+    }
+  }
+
+  
+  /*--------------------
+  Strap
+  --------------------*/
+  .strap {
+    clear: both;
+    position: relative;
+    border-top: 1px solid #99D298;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .box {
+      padding: 23px 0 20px 20px;
+      text-align: center;
+
+      & div {
+        margin-bottom: 15px;
+        
+        small {
+          font-size: 12px;
+        }
+
+        strong {
+          font-size: 12px;
+        }
+      }
+
+      sup {
+        font-size: 8px;
+        position: relative;
+        top: -5px;
+      }
+    }
+    .qrcode {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+/* { display: none; }

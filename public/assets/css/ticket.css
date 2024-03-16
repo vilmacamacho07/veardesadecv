@@ -1,0 +1,24 @@
+@media print {
+    .ticket {
+        page-break-after: always; /* Agregar salto de página después de cada ticket */
+        margin: 0; /* Eliminar márgenes */
+        border: none; /* Eliminar bordes */
+        width: 100%; /* Usar todo el ancho de la página */
+    }
+    .ticket-header {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .ticket-content {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    /* Ajustar tamaño de página */
+    @page {
+        size: 100mm 150mm; /* Tamaño personalizado (ancho x alto) */
+        /* También puedes usar tamaños predefinidos como A4, A5, etc. */
+        /* size: A4 landscape; */
+    }
+  }
